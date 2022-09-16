@@ -3,7 +3,7 @@ var router = express.Router();
 const QRCode = require('qrcode');
 
 /* GET users listing. */
-router.get('/', async (req, res, next) => {
+router.get('/', (req, res, next) => {
   let data = req.query.data;
   if (!data) {
     res.status(400).end();
